@@ -14,84 +14,83 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7f7;
+            background: #f3f6f6;
             color: #1f2937;
         }
 
         .app {
             max-width: 480px;
-            margin: 0 auto;
             min-height: 100vh;
-            background: #ffffff;
+            margin: auto;
+            background: white;
         }
 
         header {
             background: #167c80;
             color: white;
-            padding: 28px 22px 24px;
+            padding: 28px 22px 25px;
             border-radius: 0 0 24px 24px;
         }
 
         header small {
-            opacity: 0.85;
+            opacity: .85;
         }
 
         header h1 {
-            margin: 8px 0 4px;
+            margin: 7px 0 4px;
             font-size: 28px;
         }
 
         header p {
             margin: 0;
-            opacity: 0.9;
+            opacity: .9;
         }
 
         main {
             padding: 22px;
         }
 
-        .welcome {
-            margin-bottom: 20px;
-        }
-
         .welcome h2 {
             margin: 0 0 5px;
-            font-size: 22px;
         }
 
         .welcome p {
-            margin: 0;
+            margin: 0 0 20px;
             color: #6b7280;
         }
 
-        .register {
-            width: 100%;
-            border: none;
-            background: #167c80;
-            color: white;
-            padding: 18px;
-            border-radius: 16px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 24px;
+        button {
+            font-family: inherit;
         }
 
-        .register:active {
-            transform: scale(0.98);
+        .register-btn {
+            width: 100%;
+            border: 0;
+            background: #167c80;
+            color: white;
+            padding: 17px;
+            border-radius: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 22px;
+        }
+
+        .register-btn:active {
+            transform: scale(.98);
         }
 
         .card {
-            background: #f4f7f7;
+            background: #f3f6f6;
             border-radius: 18px;
-            padding: 20px;
+            padding: 19px;
             margin-bottom: 18px;
         }
 
         .card-title {
             color: #6b7280;
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
         .glucose {
@@ -101,19 +100,18 @@
         }
 
         .unit {
-            font-size: 16px;
             color: #6b7280;
         }
 
         .date {
-            margin-top: 8px;
+            margin-top: 7px;
             color: #6b7280;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .section-title {
+            margin: 27px 0 13px;
             font-size: 20px;
-            margin: 28px 0 14px;
         }
 
         .menu {
@@ -123,18 +121,135 @@
         }
 
         .menu-item {
-            background: #ffffff;
             border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 18px 14px;
+            border-radius: 15px;
+            padding: 18px 10px;
             text-align: center;
-            font-weight: bold;
+            background: white;
+            cursor: pointer;
         }
 
         .menu-item span {
             display: block;
-            font-size: 28px;
-            margin-bottom: 8px;
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        /* FORMULARIO */
+
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+
+        .home-container.hidden {
+            display: none;
+        }
+
+        .back {
+            border: 0;
+            background: none;
+            color: #167c80;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 0;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .form-title {
+            margin: 0 0 5px;
+            font-size: 25px;
+        }
+
+        .form-subtitle {
+            color: #6b7280;
+            margin: 0 0 25px;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            padding: 13px;
+            font-size: 16px;
+            background: white;
+        }
+
+        .field textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .save-btn {
+            width: 100%;
+            border: 0;
+            background: #167c80;
+            color: white;
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .cancel-btn {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #374151;
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .history {
+            margin-top: 25px;
+        }
+
+        .measurement {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 13px 0;
+        }
+
+        .measurement:last-child {
+            border-bottom: 0;
+        }
+
+        .measurement strong {
+            color: #167c80;
+            font-size: 20px;
+        }
+
+        .measurement small {
+            display: block;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .empty {
+            color: #9ca3af;
+            text-align: center;
+            padding: 15px 0;
         }
 
         footer {
@@ -156,63 +271,392 @@
         <p>Control de glucosa</p>
     </header>
 
-    <main>
+    <!-- INICIO -->
 
-        <div class="welcome">
-            <h2>Hola 👋</h2>
-            <p>Registrá tus mediciones y llevá el control de tu glucosa.</p>
-        </div>
+    <div class="home-container" id="home">
 
-        <button class="register">
-            ＋ Registrar glucosa
-        </button>
+        <main>
 
-        <div class="card">
-            <div class="card-title">Última medición</div>
+            <div class="welcome">
+                <h2>Hola 👋</h2>
+                <p>Registrá tus mediciones y llevá el control de tu glucosa.</p>
+            </div>
 
-            <div>
-                <span class="glucose">108</span>
+            <button class="register-btn" onclick="mostrarFormulario()">
+                ＋ Registrar glucosa
+            </button>
+
+            <div class="card">
+                <div class="card-title">Última medición</div>
+
+                <span class="glucose" id="ultimaGlucosa">—</span>
                 <span class="unit">mg/dL</span>
+
+                <div class="date" id="ultimaFecha">
+                    Todavía no hay mediciones
+                </div>
             </div>
 
-            <div class="date">
-                Hoy · 08:05 · Ayunas
-            </div>
-        </div>
+            <h2 class="section-title">Mi seguimiento</h2>
 
-        <h2 class="section-title">Mi seguimiento</h2>
+            <div class="menu">
 
-        <div class="menu">
+                <div class="menu-item" onclick="mostrarHistorial()">
+                    <span>📊</span>
+                    Evolución
+                </div>
 
-            <div class="menu-item">
-                <span>📊</span>
-                Evolución
-            </div>
+                <div class="menu-item" onclick="mostrarHistorial()">
+                    <span>📋</span>
+                    Historial
+                </div>
 
-            <div class="menu-item">
-                <span>📋</span>
-                Historial
-            </div>
+                <div class="menu-item">
+                    <span>📄</span>
+                    Informes
+                </div>
 
-            <div class="menu-item">
-                <span>📄</span>
-                Informes
-            </div>
+                <div class="menu-item">
+                    <span>⚙️</span>
+                    Mi perfil
+                </div>
 
-            <div class="menu-item">
-                <span>⚙️</span>
-                Mi perfil
             </div>
 
-        </div>
+            <div class="history" id="historial"></div>
 
-    </main>
+        </main>
 
-    <footer>
-        DonHugo Salud · Control y seguimiento
-    </footer>
+        <footer>
+            DonHugo Salud · Control y seguimiento
+        </footer>
+
+    </div>
+
+
+    <!-- FORMULARIO -->
+
+    <div class="form-container" id="formulario">
+
+        <main>
+
+            <button class="back" onclick="volverInicio()">
+                ← Volver
+            </button>
+
+            <h2 class="form-title">Registrar medición</h2>
+
+            <p class="form-subtitle">
+                Ingresá los datos de tu medición.
+            </p>
+
+            <div class="field">
+                <label for="glucosa">Glucosa (mg/dL)</label>
+                <input
+                    type="number"
+                    id="glucosa"
+                    placeholder="Ej: 108"
+                    min="20"
+                    max="600"
+                >
+            </div>
+
+            <div class="field">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="field">
+                <label for="hora">Hora</label>
+                <input type="time" id="hora">
+            </div>
+
+            <div class="field">
+                <label for="momento">Momento de la medición</label>
+
+                <select id="momento">
+
+                    <option value="">
+                        Seleccionar...
+                    </option>
+
+                    <option>
+                        Ayunas
+                    </option>
+
+                    <option>
+                        Antes del desayuno
+                    </option>
+
+                    <option>
+                        Después del desayuno
+                    </option>
+
+                    <option>
+                        Antes del almuerzo
+                    </option>
+
+                    <option>
+                        Después del almuerzo
+                    </option>
+
+                    <option>
+                        Antes de la cena
+                    </option>
+
+                    <option>
+                        Después de la cena
+                    </option>
+
+                    <option>
+                        Antes de dormir
+                    </option>
+
+                    <option>
+                        Otro
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="observaciones">
+                    Observaciones
+                </label>
+
+                <textarea
+                    id="observaciones"
+                    placeholder="Ej: Caminata, comida especial, malestar..."
+                ></textarea>
+            </div>
+
+            <button class="save-btn" onclick="guardarMedicion()">
+                Guardar medición
+            </button>
+
+            <button class="cancel-btn" onclick="volverInicio()">
+                Cancelar
+            </button>
+
+        </main>
+
+    </div>
 
 </div>
+
+
+<script>
+
+    let mediciones = JSON.parse(
+        localStorage.getItem("medicionesGlucosa")
+    ) || [];
+
+
+    function mostrarFormulario() {
+
+        document.getElementById("home")
+            .classList.add("hidden");
+
+        document.getElementById("formulario")
+            .classList.add("active");
+
+        const ahora = new Date();
+
+        document.getElementById("fecha").value =
+            ahora.toISOString().split("T")[0];
+
+        document.getElementById("hora").value =
+            ahora.toTimeString().slice(0,5);
+
+        document.getElementById("glucosa").focus();
+    }
+
+
+    function volverInicio() {
+
+        document.getElementById("formulario")
+            .classList.remove("active");
+
+        document.getElementById("home")
+            .classList.remove("hidden");
+
+        actualizarPantalla();
+    }
+
+
+    function guardarMedicion() {
+
+        const glucosa =
+            document.getElementById("glucosa").value;
+
+        const fecha =
+            document.getElementById("fecha").value;
+
+        const hora =
+            document.getElementById("hora").value;
+
+        const momento =
+            document.getElementById("momento").value;
+
+        const observaciones =
+            document.getElementById("observaciones").value;
+
+
+        if (!glucosa) {
+
+            alert("Ingresá el valor de glucosa.");
+
+            return;
+        }
+
+
+        if (!fecha || !hora) {
+
+            alert("Ingresá fecha y hora.");
+
+            return;
+        }
+
+
+        const medicion = {
+
+            glucosa: Number(glucosa),
+
+            fecha: fecha,
+
+            hora: hora,
+
+            momento: momento,
+
+            observaciones: observaciones
+
+        };
+
+
+        mediciones.push(medicion);
+
+
+        localStorage.setItem(
+            "medicionesGlucosa",
+            JSON.stringify(mediciones)
+        );
+
+
+        document.getElementById("glucosa").value = "";
+
+        document.getElementById("momento").value = "";
+
+        document.getElementById("observaciones").value = "";
+
+
+        alert("Medición guardada correctamente.");
+
+        volverInicio();
+
+    }
+
+
+    function actualizarPantalla() {
+
+        if (mediciones.length === 0) {
+
+            document.getElementById("ultimaGlucosa")
+                .textContent = "—";
+
+            document.getElementById("ultimaFecha")
+                .textContent =
+                "Todavía no hay mediciones";
+
+            return;
+        }
+
+
+        const ultima =
+            mediciones[mediciones.length - 1];
+
+
+        document.getElementById("ultimaGlucosa")
+            .textContent = ultima.glucosa;
+
+
+        document.getElementById("ultimaFecha")
+            .textContent =
+            ultima.fecha +
+            " · " +
+            ultima.hora +
+            (ultima.momento
+                ? " · " + ultima.momento
+                : "");
+
+
+        mostrarHistorial();
+
+    }
+
+
+    function mostrarHistorial() {
+
+        const contenedor =
+            document.getElementById("historial");
+
+
+        if (mediciones.length === 0) {
+
+            contenedor.innerHTML =
+                '<div class="empty">Todavía no hay mediciones registradas.</div>';
+
+            return;
+        }
+
+
+        let html =
+            '<h2 class="section-title">Últimas mediciones</h2>';
+
+
+        const ultimas =
+            [...mediciones].reverse().slice(0, 10);
+
+
+        ultimas.forEach(function(medicion) {
+
+            html += `
+
+                <div class="measurement">
+
+                    <strong>
+                        ${medicion.glucosa} mg/dL
+                    </strong>
+
+                    <small>
+                        ${medicion.fecha}
+                        ·
+                        ${medicion.hora}
+                        ${medicion.momento
+                            ? " · " + medicion.momento
+                            : ""}
+                    </small>
+
+                    ${
+                        medicion.observaciones
+                        ? `<small>${medicion.observaciones}</small>`
+                        : ""
+                    }
+
+                </div>
+
+            `;
+
+        });
+
+
+        contenedor.innerHTML = html;
+
+    }
+
+
+    actualizarPantalla();
+
+</script>
 
 </body>
 </html>
